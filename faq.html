@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tabalanche - FAQ</title>
+  <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/bmdmojejipbodfjbnennbnakhpboaoje">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700|Montserrat:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <header>
+    <h1><a href="/"><img src="/images/tabalanche-topper.svg"> Tabalanche</a></h1>
+    <nav><ul>
+      <li><a href="/faq.html">FAQ</a></li>
+      <li><a href="https://github.com/tabalanche/tabalanche-extension">GitHub</a></li>
+    </ul></nav>
+  </header>
+  <main>
+  <h2>Q: How is Tabalanche different from other extensions that save tabs, like OneTab?</h2>
+  <p>I wrote Tabalanche to address some of my frustrations with OneTab:</p>
+  <h3>Tabalanche doesn't slow down the more you use it</h3>
+  <p>
+  The technical design of OneTab means that, every time you use it to stash
+  tabs, it takes <em>every tab you've ever saved</em> out of storage, adds your
+  new tabs to those tabs, and sends <em>every single tab</em> back out,
+  <em>every single time</em>. This isn't too slow when you're first using
+  OneTab, and you only have a few hundred tabs - but, once you've been using it
+  for a few months, saving fifty tabs a week or so, the slowness adds up. When
+  you have several thousand tabs saved up, OneTab can freeze your entire
+  browser, for minutes at a time, every time you try to save even a single tab
+  (or even just open the browser, as OneTab loads all of your saved tabs at
+  once for its start page).
+  </p>
+  <p>
+  Tabalanche, in contrast, is written using a proper database that allows for
+  each group of tabs to be saved or loaded individually, which means that, even
+  after saving tens of thousands of tabs, Tabalanche responds within seconds,
+  whether stashing a group or reading the list.
+  </p>
+  <h3>Tabalanche makes it easier to keep some tabs open</h3>
+  <p>
+  OneTab has two ways of interacting with it: the browser action button, which
+  closes every tab in the window, and the right-click context menu, which
+  exposes every action OneTab can take in a long, segmented list. This makes it
+  so that, when looking to send only certain pages to OneTab, you have to
+  either move a certain set of tabs to a new window - only so it can be closed
+  by clicking the OneTab button - or opening a new tab and thinking through
+  which sequence of items you need to click in the page to make what you want
+  happen (and hope that you don't accidentally click the menu item
+  <em>above</em> it and close all the <em>other</em> tabs by mistake).
+  </p>
+  <p>
+  In Tabalanche, clicking the button opens a popup with four large, illustrated
+  buttons for picking which tabs to stash, as well as a button to open the list
+  of tabs that have previously been stashed. This way, you don't need to mess
+  around with new windows or complex menus just to keep the tabs you need open.
+  </p>
+  <h3>Tabalanche doesn't make it easy to accidentally close everything<h3>
+  <p>
+  Having Tabalanche's stash options under a popup means that, if you
+  accidentally click the button, you can easily back out before anything
+  closes. In OneTab, if you accidentally click the OneTab button, every tab in
+  the entire window will immediately be closed, without asking.
+  </p>
+  <!-- Also categorization and sync, but Tabalanche doesn't have those yet -->
+  <h3>Tabalanche is open source</h3>
+  <p>
+  Having all these problems with OneTab, I knew I could have fixed it to work
+  better - but, not only does OneTab not have any way for its users to
+  contribute improvements, its source code uses obfuscatory techniques to make
+  it harder for outsiders to work with it.
+  </p>
+  <p>
+  Tabalanche is
+  <a href="https://github.com/tabalanche/tabalanche-extension">fully open
+  source on GitHub</a>, so any user wanting to contribute improvements can
+  suggest them via issue or pull request.
+  </p>
+  </main>
+</body>
+</html>

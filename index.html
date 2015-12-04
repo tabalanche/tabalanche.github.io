@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tabalanche</title>
+  <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/bmdmojejipbodfjbnennbnakhpboaoje">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700|Montserrat:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <header>
+    <h1><a href="/"><img src="/images/tabalanche-topper.svg"> Tabalanche</a></h1>
+    <nav><ul>
+      <li><a href="/faq.html">FAQ</a></li>
+      <li><a href="https://github.com/tabalanche/tabalanche-extension">GitHub</a></li>
+    </ul></nav>
+  </header>
+  <div class="hero">
+    <h2>Sweep distractions aside.</h2>
+    <p>
+    Tabalanche is an extension for Google Chrome that helps you focus on what
+    you're doing, by letting you save all the extra tabs you have open to a
+    list - so you can revisit them later, once you really need them.
+    </p>
+    <button id="install" type="button">Add to Chrome</button>
+  </div>
+  <script>
+    /* global chrome */
+    function addToChrome() {
+      return chrome.webstore.install();
+    }
+    document.getElementById('install').addEventListener('click', addToChrome);
+  </script>
+</body>
+</html>
